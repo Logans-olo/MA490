@@ -4,7 +4,7 @@
 
 This project implements a modular framework for **block decomposition of symmetric matrices**, focusing on:
 
-1. Generalizing from **banded SPD matrices** to other matrix types (random SPD, user-defined, graph-based).
+1. Generalizing from **banded PSD matrices** to other matrix types (random PSD, user-defined, graph-based).
 2. Presenting **clique-based PSD decomposition** of matrices.
 3. Analyzing **positive and negative eigenvalues** (completion number) to quantify how far a matrix is from being PSD.
 
@@ -20,9 +20,9 @@ README.md # Project overview and instructions
 
 │ ├── init.py
 
-│ ├── band.py # Generate banded SPD matrices
+│ ├── band.py # Generate banded PSD matrices
 
-│ ├── random_spd.py # Generate random SPD matrices
+│ ├── random_psd.py # Generate random PSD matrices
 
 │ └── user_defined.py # Load user-provided matrices
 
