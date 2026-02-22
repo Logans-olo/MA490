@@ -1,5 +1,6 @@
 from .eigenval import eigen_summary
 from .factor_sum import factor_sum
+from .clique import max_cliques
 import numpy as np
 def report(psd_terms, A_original, tol = 1e-12):
     A_sum = np.zeros_like(A_original)
