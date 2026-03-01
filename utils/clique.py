@@ -43,7 +43,7 @@ def generate_AG(n_vertices, maximal_cliques):
                     n_i = largest_clique_size[i]
                     if n_i > 1:
                         A_G[i, j] = min(1.0/(largest_clique_size[i]-1), 1.0/(largest_clique_size[j]-1))
-
+    
     return A_G
 def generate_AG_bad(n_vertices, maximal_cliques,bad_edges=None):
     """

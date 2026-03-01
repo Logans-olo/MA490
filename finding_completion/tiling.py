@@ -12,7 +12,7 @@ def tile_top_left_4x4(n):
     size = 4 * n
     return [
         [
-            block[r % 4][c % 4] if (r // 4 == c // 4) else None
+            block[r % 4][c % 4] if (r // 4 == c // 4) else 0
             for c in range(size)
         ]
         for r in range(size)

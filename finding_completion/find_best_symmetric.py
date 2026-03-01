@@ -4,8 +4,8 @@ import itertools
 
 from tiling import tile_top_left_4x4
 # Original matrix with asymmetry noted
-given_matrix = tile_top_left_4x4(1)
-MATRIX_SIZE = 4
+given_matrix = tile_top_left_4x4(5)
+MATRIX_SIZE = 20
 def solve_symmetric_matrix():
     
     # Find parameters to optimize
