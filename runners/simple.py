@@ -1,7 +1,7 @@
-from matrix_type import generate_matrix
 from decomposition import elimination
 import copy
 from utils import report
+from matrix_type import generate_matrix
 def main():
     A_orig = generate_matrix("band", 10)
     A = copy.deepcopy(A_orig)

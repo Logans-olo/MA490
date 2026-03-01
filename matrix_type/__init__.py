@@ -3,7 +3,7 @@ from .rand_spd import generate_rand_spd
 from .user_def import generate_user
 import numpy as np
 
-def generate_matrix(kind, n, tokens) -> np.ndarray:
+def generate_matrix(kind, n, tokens=None) -> np.ndarray:
     if(kind == "band"):
         return generate_band(n)
     elif (kind =="random"):
