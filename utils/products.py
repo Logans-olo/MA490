@@ -4,7 +4,6 @@ import numpy as np
 Very simple set of functions for testing graph products.
 These are simply warreprs over Networkx functions
 Designed to be used with Numpy Arrays
-
 """
 def cartesian_product(A: np.ndarray, B: np.ndarray):
     G = nx.from_numpy_array(A)

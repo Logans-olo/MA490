@@ -1,4 +1,5 @@
 from utils import clique
+from matrix_type import rand_spd
 from utils import products
 import numpy as np
 import cvxpy as cp
@@ -6,7 +7,7 @@ import cvxpy as cp
 
     
 def random_graph(n, p):
-    M = np.random.rand(n, n) < p
+    M = np.abs(np.random.rand(n, n)) < p
     A = np.triu(M, 1)
     A = A + A.T  # make symmetric (undirected)
     np.fill_diagonal(A, 0)
@@ -55,7 +56,7 @@ def psd_completion_rank(A_G):
 
             return rank, eigvals
     return None, None
-def product_experiment(num_trials=50, n=3, p=0.5):
+def product_experiment(num_trials=50, n=4, p=0.5):
 
     rank_A = []
     rank_B = []
@@ -64,8 +65,8 @@ def product_experiment(num_trials=50, n=3, p=0.5):
 
     for _ in range(num_trials):
 
-        A = random_graph(n, p)
-        B = random_graph(n, p)
+        A = rand_spd.generate_rand_spd(n)
+        B = rand_spd.generate_rand_spd(n)
 
         rA, _ = psd_completion_rank(A)
         rB, _ = psd_completion_rank(B)
